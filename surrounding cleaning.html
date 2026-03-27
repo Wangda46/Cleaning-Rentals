@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Surrounding Cleaning</title>
+    <link rel="stylesheet" href="chatbot.css">
+    <script src="https://kit.fontawesome.com/f893e24a87.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #A0D585;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Professional Back Arrow */
+        .back-arrow {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            background: #0a8f5a;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            transition: background 0.3s, transform 0.3s;
+            z-index: 1000;
+        }
+
+        .back-arrow:hover {
+            background: #067443;
+            transform: translateX(-5px);
+        }
+
+        .back-arrow::before {
+            content: "←";
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 60px; /* give space for fixed arrow */
+            font-family: cursive;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-body h3 {
+            color: #0a8f5a;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .card-body p {
+            font-size: 15px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Professional Back Arrow -->
+<a href="javascript:history.back()" class="back-arrow">Back</a>
+
+<h1>Surrounding Cleaning – What It Includes 🧹</h1>
+
+<div class="cards-container">
+
+    <div class="card">
+        <img src="https://i.pinimg.com/1200x/17/e5/ea/17e5ea4493c00640fe49e1f49fdfb0fd.jpg" alt="Dusting">
+        <div class="card-body">
+            <h3>Trash and waste collection</h3>
+            <p>We collect and remove trash and waste from all areas of your home, ensuring a clean, organized, and hygienic environment.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/1200x/19/56/b4/1956b4e506f1367dcccc625eda5158c4.jpg" alt="Garden cleaning">
+        <div class="card-body">
+            <h3>Garden and yard cleaning</h3>
+            <p>We clean gardens and yards thoroughly, removing leaves, debris, and unwanted clutter to maintain a neat and healthy outdoor space.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/1200x/26/f5/fb/26f5fbd3d582a2c4da89e4efc1dbfa48.jpg" alt="Parking cleaning">
+        <div class="card-body">
+            <h3>Parking area cleaning</h3>
+            <p>We clean parking areas thoroughly, removing dirt, debris, leaves, and litter to maintain a safe and organized space.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- Chatbot Section -->
+
+<!-- Chat Icon Button -->
+<button id="chatButton">
+    <img src="chatbot image.png" alt="">
+</button>
+
+<!-- Chat Window -->
+<div id="chatContainer">
+
+    <!-- Chat Header -->
+    <div class="chat-header">
+        Support Agent
+        <span id="closeChat"><i class="fa-solid fa-xmark"></i></span>
+    </div>
+
+    <!-- Message Area -->
+    <div id="chatMessages"></div>
+    <hr>
+
+    <!-- Input Area -->
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="I’m here if you need me.">
+        <button id="sendBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <div class="foot">
+        <p>Powered by Premium Clean & Rental</p>
+    </div>
+
+</div>
+<script src="chatbot.js"></script>
+</body>
+</html>

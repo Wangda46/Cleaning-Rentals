@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <script src="https://kit.fontawesome.com/f893e24a87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="main">
+
+    <!-- Hamburger Icon -->
+<div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="Group logo.png">
+    </div>
+
+    <ul class="menu">
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="about us.html">ABOUT US</a></li>
+      <li><a href="services.html">SERVICE</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <div class="search">
+      <input class="srch" id="searchInput" type="search" placeholder="Type to Search" >
+      <button class="btn" onclick="searchSite()">Search</button>
+    </div>
+  </div>
+
+  <section class="services-section">
+    <h2>Our Services</h2>
+    <p>Premium Cleaning and Rental provides professional cleaning services for homes,
+offices, and commercial spaces. We ensure a spotless and healthy environment using
+quality equipment and safe cleaning products. Our new and modern fleet delivers
+excellent service with customer satisfaction as our top priority.</p>
+
+<div class="services-container">
+      <div class="service-box">
+  <div class="service-icon"><i class="fa-solid fa-broom"></i></div>
+  <h3>Cleaning Services</h3>
+  <p>Cleaning services help maintain spotless homes, offices, and commercial spaces by using professional equipment and safe products. They ensure a healthier environment while saving clients time and effort with reliable, high-quality results.</p>
+  <button class="serviceBtn" data-group="cleaning">
+        Click Here
+        </button>
+
+</div>
+
+<div class="service-box">
+  <div class="service-icon"><i class="fa-brands fa-airbnb"></i></div>
+  <h3>Rental Services</h3>
+  <p>Rental services provide customers with convenient access to vehicles, equipment, or properties without the burden of ownership. They offer flexible options tailored to short-term or long-term needs, ensuring affordability and ease for individuals and businesses alike.</p>
+ <a href="Rent.html"><button class="serviceBtn" data-group="rental">
+        Click Here
+        </button></a>
+    </div>
+
+    </div>
+  </section>
+</div>
+
+  <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Contact Information -->
+        <div class="footer-column">
+          <h3>Contact Information</h3>
+          <p><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Yonphula, Trashigang, Bhutan</p>
+          <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;wangdaleki39@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+97517718822</p>
+          <p><i class="fa-brands fa-whatsapp"></i>&nbsp;&nbsp;WhatsApp: +97517718822 </p>
+          <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    
+    <!-- Overview of our company  -->
+    <div class="footer-column">
+      <h3>Overview of our company</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Rent.html">Rental</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    
+    <!-- Cleaning and Rental Services -->
+    <div class="footer-column">
+      <h3>Cleaning and Rental Services</h3>
+      <ul>
+        <li><a href="House cleaning.html">House Cleaning</a></li>
+        <li><a href="tank cleaning.html">Plumbing Services</a></li>
+        <li><a href="surrounding cleaning.html">Surrounding Cleaning</a></li>
+        <li><a href="vehicles.html">Vehicles</a></li>
+        <li><a href="Outdoor & Travel.html">Outdoor & Travel</a></li>
+        <li><a href="household items.html">Household Items</a></li>
+      </ul>
+    </div>
+    
+    <!-- Location -->
+    <div class="footer-column">
+      <h3>Location</h3>
+      <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.306634013!2d91.503!3d27.266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e1a123456789%3A0xabcdef123456789!2sYonphula%20DSP%20Center!5e0!3m2!1sen!2sbt!4v1711234567890!5m2!1sen!2sbt" 
+      width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    
+    
+    <button class="map-btn">Open in Maps</button>
+  </div>
+</div>
+</footer>
+
+<!-- Chatbot Section -->
+
+<!-- Chat Icon Button -->
+<button id="chatButton">
+    <img src="chatbot image.png" alt="">
+</button>
+
+<!-- Chat Window -->
+<div id="chatContainer">
+
+    <!-- Chat Header -->
+    <div class="chat-header">
+        Support Agent
+        <span id="closeChat"><i class="fa-solid fa-xmark"></i></span>
+    </div>
+
+    <!-- Message Area -->
+    <div id="chatMessages"></div>
+    <hr>
+
+    <!-- Input Area -->
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="I’m here if you need me.">
+        <button id="sendBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <div class="foot">
+        <p>Powered by Premium Clean & Rental</p>
+    </div>
+
+</div>
+ <script src="services.js"></script>   
+ <script src="chatbot.js"></script>
+
+<script src="script.js"></script>
+  <script src="chatbot.js"></script>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".menu");
+
+    hamburger.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  });
+</script>
+</body>
+</html>

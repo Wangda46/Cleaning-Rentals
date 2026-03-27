@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cleaning Services</title>
+<link rel="stylesheet" href="cleaning.css">
+;<link rel="stylesheet" href="chatbot.css">
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "EScc3JyC0odijh7b0",
+      });
+   })();
+</script>
+    <script src="https://kit.fontawesome.com/ae2c3995dc.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<!-- Back Button -->
+<a href="services.html" class="back-arrow">Back</a>
+
+<section class="cleaningSection">
+
+<h1 class="title">Cleaning Services</h1>
+
+<div class="container">
+
+<div class="card">
+<div class="icon">🏠</div>
+<h3>Home Cleaning</h3>
+<ul>
+<li>Regular Cleaning</li>
+<li>Kitchen & Bathroom</li>
+<li>Dusting & Mopping</li>
+</ul>
+<button class="bookBtn">Book Now</button>
+</div>
+
+<div class="card">
+<div class="icon">🏢</div>
+<h3>Office Cleaning</h3>
+<ul>
+<li>Office Cleaning</li>
+<li>Window Cleaning</li>
+<li>Waste Removal</li>
+</ul>
+<button class="bookBtn">Book Now</button>
+</div>
+
+<div class="card">
+<div class="icon">🛋</div>
+<h3>Deep Cleaning</h3>
+<ul>
+<li>Sofa & Carpet Cleaning</li>
+<li>Full House Cleaning</li>
+<li>Window Washing</li>
+</ul>
+<button class="bookBtn">Book Now</button>
+</div>
+
+</div>
+</section>
+
+<!-- Booking Form -->
+<div id="bookingForm" class="form-wrapper" style="display:none;">
+  <div class="form-container">
+    
+    <!-- Left Blue Panel -->
+    <div class="visual-section">
+      <h2>Book Your Service</h2>
+      <p>We're excited to work with you. Please fill out the form to secure your appointment.</p>
+    </div>
+
+    <!-- Right Form Section -->
+    <div class="form-section">
+      <h1>Book an Appointment</h1>
+
+      <!-- Progress Bar -->
+      <div class="progress-indicator">
+        <div class="progress-line">
+          <div class="progress-line-fill"></div>
+        </div>
+        <div class="step-circle active" data-step="1">1</div>
+        <div class="step-circle" data-step="2">2</div>
+        <div class="step-circle" data-step="3">3</div>
+      </div>
+
+      <!-- Multi-Step Form -->
+      <form id="multiStepForm">
+        
+        <!-- Step 1: Your Details -->
+        <div class="step active" data-step="1" >
+          <h3 class="step-title">Your Details</h3>
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-4">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Contact number" required>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn-navigation" data-action="next">Next</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Booking Details -->
+        <div class="step" data-step="2">
+          <h3 class="step-title">Booking Details</h3>
+          <div class="mb-3">
+            <label for="service" class="form-label">Service</label>
+            <select class="form-select" id="service" required>
+              <option value="">Select a service...</option>
+              <option value="Home Cleaning">Home Cleaning</option>
+              <option value="Office Cleaning">Office Cleaning</option>
+              <option value="Deep Cleaning">Deep Cleaning</option>
+            </select>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="date" class="form-label">Date</label>
+              <input type="date" class="form-control" id="date" required>
+            </div>
+            <div class="col-md-6 mb-4">
+              <label for="time" class="form-label">Time</label>
+              <input type="time" class="form-control" id="time" required>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button type="button" class="btn btn-outline-secondary" data-action="prev">Previous</button>
+            <button type="button" class="btn-navigation" data-action="next">Next</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Review & Confirm -->
+        <div class="step" data-step="3">
+          <h3 class="step-title">Review & Confirm</h3>
+          <div class="confirmation-details">
+            <p><strong>Name:</strong> <span id="confirmName"></span></p>
+            <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="confirmPhone"></span></p>
+            <hr>
+            <p><strong>Service:</strong> <span id="confirmService"></span></p>
+            <p><strong>Date:</strong> <span id="confirmDate"></span></p>
+            <p><strong>Time:</strong> <span id="confirmTime"></span></p>
+          </div>
+          <div class="d-flex justify-content-between mt-4">
+            <button type="button" class="btn btn-outline-secondary" data-action="prev">Previous</button>
+            <button type="button" class="btn-navigation" data-action="submit">Book Now</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Success Message -->
+      <div class="success-message" id="successMessage">
+        <div class="success-icon">&#10003;</div>
+        <h2>Booking Confirmed!</h2>
+        <p>We have received your booking and will be in touch shortly.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Contact Information -->
+        <div class="footer-column">
+          <h3>Contact Information</h3>
+          <p><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Yonphula, Trashigang, Bhutan</p>
+          <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;wangdaleki39@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+97517718822</p>
+          <p><i class="fa-brands fa-whatsapp"></i>&nbsp;&nbsp;WhatsApp: +97517718822 </p>
+          <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    
+    <!-- Overview of our company  -->
+    <div class="footer-column">
+      <h3>Overview of our company</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Rent.html">Rental</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </div>
+    
+    <!-- Cleaning and Rental Services -->
+    <div class="footer-column">
+      <h3>Cleaning and Rental Services</h3>
+      <ul>
+        <li><a href="House cleaning.html">House Cleaning</a></li>
+        <li><a href="tank cleaning.html">Plumbing Services</a></li>
+        <li><a href="surrounding cleaning.html">Surrounding Cleaning</a></li>
+        <li><a href="vehicles.html">Vehicles</a></li>
+        <li><a href="Outdoor & Travel.html">Outdoor & Travel</a></li>
+        <li><a href="household items.html">Household Items</a></li>
+      </ul>
+    </div>
+    
+    <!-- Location -->
+    <div class="footer-column">
+      <h3>Location</h3>
+      <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.306634013!2d91.503!3d27.266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e1a123456789%3A0xabcdef123456789!2sYonphula%20DSP%20Center!5e0!3m2!1sen!2sbt!4v1711234567890!5m2!1sen!2sbt" 
+      width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+       
+    <button class="map-btn">Open in Maps</button>
+  </div>
+</div>
+</footer>
+
+<!-- Chatbot Section -->
+<!-- Chat Icon Button -->
+<button id="chatButton">
+    <img src="chatbot image.png" alt="">
+</button>
+
+<!-- Chat Window -->
+<div id="chatContainer">
+
+    <!-- Chat Header -->
+    <div class="chat-header">
+        Support Agent
+        <span id="closeChat"><i class="fa-solid fa-xmark"></i></span>
+    </div>
+
+    <!-- Message Area -->
+    <div id="chatMessages"></div>
+    <hr>
+
+    <!-- Input Area -->
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="I’m here if you need me.">
+        <button id="sendBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <div class="foot">
+        <p>Powered by Premium Clean & Rental</p>
+    </div>
+
+</div>
+<script src="cleaning.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

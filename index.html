@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Login Form -->
+<div class="formCon">
+  <div class="login-card">
+    <h2>Login</h2>
+
+    <form id="loginForm" action="home.html">
+      
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="username" placeholder="Username" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+
+      <div class="options">
+        <label><input type="checkbox" id="rememberMe"> Remember me</label>
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button type="submit">Login</button>
+
+      <p class="register-text">
+        Don't have an account? <a href="sign up.html">Register</a>
+      </p>
+
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
