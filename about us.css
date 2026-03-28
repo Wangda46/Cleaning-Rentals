@@ -641,7 +641,7 @@ main{
   /* NAVBAR ON HERO */
   .navbar {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     position: absolute;
     top: 0;

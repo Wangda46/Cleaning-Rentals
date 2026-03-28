@@ -596,6 +596,42 @@ section {
     gap: 20px;
   }
 
+  .login-card {
+    position: relative;   /* remove absolute */
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 90%;           /* responsive width */
+    height: auto;         /* flexible height */
+    padding: 20px;
+    /* margin: 0 auto;       center horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formCon {
+    padding: 20px;        /* add spacing on sides */
+  }
+
+  .login-card h2 {
+    font-size: 20px;
+  }
+
+  .input-group input {
+    font-size: 13px;
+    padding: 10px 10px 10px 38px;
+  }
+
+  .login-card button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .options {
+    font-size: 11px;
+  }
+
   /* Footer */
   .footer-container {
     grid-template-columns: 1fr;
@@ -694,7 +730,6 @@ section {
 
   .hamburger {
     display: flex;
-    /* visibility: hidden; */
   }
 
   /* Center hero text */
@@ -745,10 +780,13 @@ section {
     right: auto;
     transform: none;
 
-    width: 80%;           /* responsive width */
+    width: 70%;           /* responsive width */
     height: auto;         /* flexible height */
     padding: 20px;
-    margin: 0 auto;       /* center horizontally */
+    /* margin: 0 auto;       center horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .formCon {
