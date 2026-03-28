@@ -636,7 +636,7 @@ main{
 /* ===============================
    MEDIA QUERY (MAX-WIDTH: 600px)
    =============================== */
-@media (max-width: 600px) {
+@media (min-width: 400px) and (max-width:768px) {
 
   /* NAVBAR ON HERO */
   .navbar {

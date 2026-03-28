@@ -635,7 +635,7 @@ section {
 }
 
 
-@media (max-width: 600px) {
+@media (min-width:400px) and (max-width:768px){
 
   .navbar {
     display: flex;
@@ -653,9 +653,9 @@ section {
 
   /* Logo LEFT */
   .logo {
-    float: none;
-    width: auto;
-    height: auto;
+    /* float: none; */
+    /* width: auto; */
+    /* height: auto; */
   }
 
   .logo img {
@@ -745,10 +745,9 @@ section {
     right: auto;
     transform: none;
 
-    width: 70%;           /* responsive width */
+    width: 80%;           /* responsive width */
     height: auto;         /* flexible height */
     padding: 20px;
-
     margin: 0 auto;       /* center horizontally */
   }
 

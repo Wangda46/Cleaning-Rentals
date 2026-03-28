@@ -480,7 +480,7 @@ main {
 /* ===============================
    MEDIA QUERY (MAX-WIDTH: 600px)
    =============================== */
-@media (max-width: 600px) {
+@media (min-width: 400px) and (max-width:768px) {
 
   /* NAVBAR ON HERO */
   .navbar {
@@ -598,7 +598,7 @@ main {
     height: 34px;
   }
   .footer {
-    margin-top: 20px;
+    /* margin-top: 20px;` */
     position: relative;
   }
 }

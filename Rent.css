@@ -526,7 +526,7 @@ ul{
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 400px) and (max-width:768px) {
   /* Title */
   .title {
     font-size: 36px;
