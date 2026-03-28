@@ -10,6 +10,7 @@ body {
   width: 100%;
   height: 131vh;
   position: relative;
+  overflow: hidden;
 }
 
     /* Navbar */
@@ -108,6 +109,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   animation: change 10s infinite ease-in-out;
 }
 
@@ -395,6 +397,13 @@ body {
 
 @media (max-width: 400px) {
   /* Navbar adjustments */
+  body {
+    overflow-x: hidden;   /* prevents horizontal scrollbars */
+    overflow-y: auto;     /* allows vertical scrolling */
+    box-sizing: border-box;
+
+  }
+
   .navbar {
     padding: 0 20px;
     height: auto;
@@ -420,6 +429,9 @@ body {
   .search {
     display: none;
   }
+  .main {
+    height: auto;
+  }
 
   .services-section {
     height: auto; /* let content define height */
@@ -429,16 +441,14 @@ body {
 
   .services-section h2 {
     font-size: 28px; /* smaller heading */
-    padding-top: 100px;
+    padding-top: 40px;
   }
 
   .services-section p {
     font-size: 16px; /* smaller paragraph text */
   }
 
-  .main {
-    height: 115vh;
-  }
+  
   .services-container {
     justify-content: center;   /* centers horizontally */
     align-items: center;       /* centers vertically */
@@ -511,5 +521,125 @@ body {
 
   .menu li {
     margin: 20px 0;
+  }
+}
+
+/* ===============================
+   MEDIA QUERY (MAX-WIDTH: 600px)
+   =============================== */
+@media (max-width: 600px) {
+  /* NAVBAR ON HERO */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+    /* background: rgba(0,0,0,0.6); */
+    margin-top: 0;
+  }
+
+  /* LOGO LEFT */
+  .logo {
+    float: none;
+    width: auto;
+    height: auto;
+  }
+
+  .logo img {
+    width: 60px;
+    height: auto;
+  }
+
+  /* MENU RIGHT (INLINE) */
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 0;
+    float: none;
+    padding-right: 40px;
+  }
+
+  .menu li {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .menu li a {
+    font-size: 13px;
+  }
+
+  /* REMOVE HAMBURGER */
+  .hamburger {
+    display: none;
+  }
+
+  /* HIDE SEARCH */
+  .search {
+    display: none;
+  }
+
+  .main {
+    height: auto;
+  }
+/* Services section */
+  .services-section {
+    height: auto;
+    padding: 0px 20px;
+  }
+
+  .services-section h2 {
+    font-size: 32px;
+    padding-top: 80px;
+  }
+
+  .services-section p {
+    font-size: 18px;
+  }
+
+  /* Fix container position */
+  .services-container {
+    position: relative;
+    top: auto;
+    margin: 40px auto;
+    gap: 20px;
+  }
+
+  /* Service box */
+  .service-box {
+    width: 90%;
+    margin-top: 20px;
+    padding: 30px 15px 15px;
+  }
+
+  .service-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+    top: -35px;
+  }
+
+  .service-box h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-box p {
+    font-size: 0.9rem;
+  }
+
+  .serviceBtn {
+    font-size: 15px;
+    padding: 10px 22px;
+  }
+
+
+  .footer {
+    /* margin-top: 20px; */
+    position: relative;
   }
 }

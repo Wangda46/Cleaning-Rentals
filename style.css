@@ -633,3 +633,138 @@ section {
     margin: 20px 0;
   }
 }
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;   /* stays on hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+    /* background: rgba(0,0,0,0.6); overlay effect */
+    margin-top: 0;
+  }
+
+  /* Logo LEFT */
+  .logo {
+    float: none;
+    width: auto;
+    height: auto;
+  }
+
+  .logo img {
+    width: 60px;
+    height: auto;
+  }
+
+  /* Menu RIGHT (inline like screenshot) */
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 0;
+    float: none;
+  }
+
+  .menu li {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .menu li a {
+    font-size: 13px;
+  }
+
+  /* Hide extra things */
+  .search {
+    display: none;
+  }
+
+  .hamburger {
+    /* display: none; */
+    visibility: hidden;
+  }
+
+  /* Center hero text */
+  .text {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 24px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+  /* Cards section */
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .card {
+    width: 350px;
+    margin-bottom: 20px;
+  }
+
+  /* Choose section */
+  .choose {
+    height: auto;
+    padding: 20px;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .list ul {
+    padding-left: 20px;
+  }
+
+  .login-card {
+    position: relative;   /* remove absolute */
+    top: auto;
+    right: auto;
+    transform: none;
+
+    width: 70%;           /* responsive width */
+    height: auto;         /* flexible height */
+    padding: 20px;
+
+    margin: 0 auto;       /* center horizontally */
+  }
+
+  .formCon {
+    padding: 20px;        /* add spacing on sides */
+  }
+
+  .login-card h2 {
+    font-size: 20px;
+  }
+
+  .input-group input {
+    font-size: 13px;
+    padding: 10px 10px 10px 38px;
+  }
+
+  .login-card button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .options {
+    font-size: 11px;
+  }
+}
