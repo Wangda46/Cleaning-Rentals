@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 main{
-    height: 70vh;
+    height: 100vh;
     background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
     background-repeat: no-repeat;
     background-position: center;
@@ -38,7 +38,7 @@ main{
   left: 0;
   z-index: 3;
   background: transparent;
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .logo {
@@ -51,6 +51,7 @@ main{
     width: 100%;
     height: 100%;
 }
+
 /* Shift menu closer to search */
 .menu {
   list-style: none;
@@ -456,13 +457,17 @@ main{
   right: 20px;
   top: 25px;
   z-index: 5;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
 }
 
 .hamburger span {
   height: 3px;
-  width: 25px;
-  background: white;
-  margin: 4px 0;
+  width: 30px;
+  background: black;
+  /* color: black; */
+  margin: 2.5px 0;
   display: block;
   transition: 0.3s;
 }
@@ -620,7 +625,7 @@ main{
     flex-direction: column;
     background: rgba(0,0,0,0.9);
     position: absolute;
-    top: 0;
+    top: -20px;
     right: 0px;
     width: 50%;
     height: 100vh;
@@ -629,11 +634,12 @@ main{
   }
 
   .menu li {
-    margin: 20px 0;
+    margin-top: 70px;
+
   }
 }
 
-/* ===============================
+ /* ===============================
    MEDIA QUERY (MAX-WIDTH: 600px)
    =============================== */
 @media (min-width: 400px) and (max-width:768px) {
@@ -664,27 +670,6 @@ main{
     width: 60px;
     height: auto;
   }
-
-  /* MENU RIGHT (INLINE) */
-  .menu {
-    display: block;
-    flex-direction: column;
-    background: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 0;
-    right: 0px;
-    width: 50%;
-    height: 100vh;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .menu li {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-  }
-
 
   /* REMOVE HAMBURGER */
   .hamburger {
@@ -743,4 +728,23 @@ main{
     /* margin-top: 20px; */
     position: relative;
   }
-}
+
+.menu {
+    display: none; /* hidden until toggled */
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: -30px;
+    right: 0px;
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu li {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+  }
+}  

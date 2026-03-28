@@ -342,13 +342,17 @@ main {
   right: 20px;
   top: 25px;
   z-index: 5;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
 }
 
 .hamburger span {
   height: 3px;
-  width: 25px;
-  background: white;
-  margin: 4px 0;
+  width: 30px;
+  background: black;
+  /* color: black; */
+  margin: 2.5px 0;
   display: block;
   transition: 0.3s;
 }
@@ -462,17 +466,16 @@ main {
     flex-direction: column;
     background: rgba(0,0,0,0.9);
     position: absolute;
-    top: 0px;
+    top: -20px;
     right: 0px;
     width: 50%;
     height: 100vh;
     text-align: center;
-    padding: 10px 0;
-    
+    padding: 10px 0;    
   }
 
   .menu li {
-    margin: 20px 0;
+    margin-top: 70px;
   }
 }
 
@@ -485,7 +488,7 @@ main {
   /* NAVBAR ON HERO */
   .navbar {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     position: absolute;
     top: 0;
@@ -507,26 +510,6 @@ main {
   .logo img {
     width: 60px;
     height: auto;
-  }
-
-  /* MENU RIGHT (INLINE) */
-  .menu {
-    display: block;
-    flex-direction: column;
-    background: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 0;
-    right: 0px;
-    width: 50%;
-    height: 100vh;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .menu li {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
   }
 
   /* REMOVE HAMBURGER */
@@ -596,5 +579,24 @@ main {
   .footer {
     /* margin-top: 20px;` */
     position: relative;
+  }
+
+  .menu {
+    display: none; /* hidden until toggled */
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: -30px;
+    right: 0px;
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu li {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
   }
 }

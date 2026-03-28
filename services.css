@@ -42,13 +42,13 @@ body {
 .menu {
   list-style: none;
   float: left;
-  margin-top: 35px;
-  margin-left: 260px; /* Adjust to bring menu near search */
+  margin-top: 30px;
+  margin-left: 285px; /* Adjust to bring menu near search */
 }
 
 .menu li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 
 .menu li a {
@@ -105,7 +105,7 @@ body {
   background-image: linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)
-      ),url(services1.jpg);
+      ),url("https://img.freepik.com/free-vector/cleaners-with-cleaning-products-housekeeping-service_18591-52055.jpg?semt=ais_hybrid&w=740&q=80");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -118,19 +118,19 @@ body {
     background-image: linear-gradient(
          rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)
-      ),url(services1.jpg);
+      ),url("https://img.freepik.com/free-vector/cleaners-with-cleaning-products-housekeeping-service_18591-52055.jpg?semt=ais_hybrid&w=740&q=80");
   }
   50% {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)
-      ),url(services2.jpg);
+      ),url("https://intranetproprete.com/wp-content/uploads/2021/07/DESSIN-HEADER-MOBILE.png");
   }
   100% {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)
-      ),url(services4.jpg);
+      ),url("https://img.freepik.com/free-vector/it-yourself-video-blogger-cartoon-icon-with-character-mechanic-computer-screen_1284-63878.jpg?semt=ais_incoming&w=740&q=80");
   }
 } 
 
@@ -375,35 +375,30 @@ body {
   background: #666;
 }
 
-/* Hamburger (hidden on desktop) */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   position: absolute;
-  right: 20px;
+  right: -20px;
   top: 25px;
   z-index: 5;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
 }
 
 .hamburger span {
   height: 3px;
-  width: 25px;
-  background: white;
-  margin: 4px 0;
+  width: 30px;
+  background: black;
+  /* color: black; */
+  margin: 2.5px 0;
   display: block;
   transition: 0.3s;
 }
 
 @media (max-width: 400px) {
-  /* Navbar adjustments */
-  body {
-    overflow-x: hidden;   /* prevents horizontal scrollbars */
-    overflow-y: auto;     /* allows vertical scrolling */
-    box-sizing: border-box;
-
-  }
-
   .navbar {
     padding: 0 20px;
     height: auto;
@@ -511,8 +506,8 @@ body {
     flex-direction: column;
     background: rgba(0,0,0,0.9);
     position: absolute;
-    top: 0;
-    right: 0px;
+    top: -20px;
+    right: 20px;
     width: 50%;
     height: 100vh;
     text-align: center;
@@ -520,7 +515,8 @@ body {
   }
 
   .menu li {
-    margin: 20px 0;
+    margin-top: 70px;
+    padding-right: 20px;
   }
 }
 
@@ -528,16 +524,17 @@ body {
    MEDIA QUERY (MAX-WIDTH: 600px)
    =============================== */
 @media (min-width: 400px) and (max-width:768px) {
+
   /* NAVBAR ON HERO */
   .navbar {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px; 
+    height: 100px;
     padding: 0 20px;
     /* background: rgba(0,0,0,0.6); */
     margin-top: 0;
@@ -555,29 +552,10 @@ body {
     height: auto;
   }
 
-  /* MENU RIGHT (INLINE) */
-  .menu {
-    display: block;
-    flex-direction: column;
-    background: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 0;
-    right: 0px;
-    width: 50%;
-    height: 100vh;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .menu li {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-  }
-
   /* REMOVE HAMBURGER */
   .hamburger {
     display: flex;
+    margin-right: 40px;
   }
 
   /* HIDE SEARCH */
@@ -638,9 +616,28 @@ body {
     padding: 10px 22px;
   }
 
-
   .footer {
     /* margin-top: 20px; */
     position: relative;
+  }
+
+  .menu {
+    display: none; /* hidden until toggled */
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu li {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
   }
 }
