@@ -557,17 +557,22 @@ body {
 
   /* MENU RIGHT (INLINE) */
   .menu {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    margin: 0;
-    float: none;
-    padding-right: 40px;
+    display: block;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    padding: 10px 0;
   }
 
   .menu li {
-    display: inline-block;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
   }
 
   .menu li a {
@@ -576,7 +581,7 @@ body {
 
   /* REMOVE HAMBURGER */
   .hamburger {
-    display: none;
+    display: flex;
   }
 
   /* HIDE SEARCH */
