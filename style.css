@@ -689,9 +689,9 @@ section {
 
   /* Logo LEFT */
   .logo {
-    /* float: none; */
-    /* width: auto; */
-    /* height: auto; */
+    float: none;
+    width: auto;
+    height: auto;
   }
 
   .logo img {
@@ -717,10 +717,6 @@ section {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-  }
-
-  .menu li a {
-    font-size: 13px;
   }
 
   /* Hide extra things */

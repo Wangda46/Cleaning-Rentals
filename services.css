@@ -563,7 +563,7 @@ body {
     position: absolute;
     top: 0;
     right: 0px;
-    width: 100%;
+    width: 50%;
     height: 100vh;
     text-align: center;
     padding: 10px 0;
@@ -573,10 +573,6 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-  }
-
-  .menu li a {
-    font-size: 13px;
   }
 
   /* REMOVE HAMBURGER */
