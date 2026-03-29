@@ -678,9 +678,8 @@ section {
    MEDIA QUERY (MAX-WIDTH: 600px)
    =============================== */
 @media (min-width: 400px) and (max-width:768px) {
-
   /* NAVBAR ON HERO */
-  .navbar {
+   .navbar {
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
@@ -706,14 +705,14 @@ section {
     height: auto;
   }
 
-  /* Hide extra things */
-  .search {
-    display: none;
-  }
-
+  /* REMOVE HAMBURGER */
   .hamburger {
     display: flex;
-    /* visibility: hidden; */
+  }
+
+  /* HIDE SEARCH */
+  .search {
+    display: none;
   }
 
   /* Center hero text */
@@ -763,8 +762,7 @@ section {
     top: auto;
     right: auto;
     transform: none;
-
-    width: 70%;           /* responsive width */
+    width: 300px;           /* responsive width */
     height: auto;         /* flexible height */
     padding: 20px;
     margin: 0 auto;       /* center horizontally */
@@ -811,3 +809,132 @@ section {
     flex-direction: column;
   }
 }
+
+@media (min-width:768px) and (max-width:900px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px; /* add some horizontal padding */
+  }
+
+  /* LOGO LEFT */
+  .logo {
+    width: 30%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .logo img {
+    width: 100px;
+    height: auto;
+    margin: 0;
+  }
+
+  /* REMOVE HAMBURGER */
+  .hamburger {
+    display: none;
+  }
+
+  /* HIDE SEARCH */
+  .search {
+    display: none;
+  }
+
+  /* MENU ALIGN HORIZONTALLY WITH SPACE */
+  .menu {
+    display: flex;                 /* horizontal layout */
+    justify-content: space-around; /* equal spacing */
+    align-items: center;           /* vertical alignment */
+    width: 60%;                    /* adjust menu width */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu li {
+    display: inline-block;         /* keep items horizontal */
+    padding: 0 15px;               /* horizontal spacing between items */
+  }
+
+  /* Center hero text */
+  .text {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 35px;
+  }
+
+  .text p {
+    font-size: 1p8x;
+  }
+
+  /* Cards section */
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .card {
+    width: 350px;
+    margin-bottom: 20px;
+  }
+
+  /* Choose section */
+  .choose {
+    height: auto;
+    padding: 20px;
+  }
+
+  .list {
+    gap: 20px;
+  }
+
+  .list ul {
+    padding-left: 20px;
+  }
+
+  /* Login card */
+  .login-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .formCon {
+    padding: 20px;
+  }
+
+  .login-card h2 {
+    font-size: 20px;
+  }
+
+  .input-group input {
+    font-size: 13px;
+    padding: 10px 10px 10px 38px;
+  }
+
+  .login-card button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .options {
+    font-size: 11px;
+  }
+}
+

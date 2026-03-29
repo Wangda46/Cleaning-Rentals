@@ -129,11 +129,11 @@ main {
 }
 .aboutus {
     width: 700px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding: 20px;
     text-align: justify;
     border-radius: 10px;
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 7px gray;
 }
 
 .aboutus h1 {
@@ -576,6 +576,7 @@ main {
     width: 34px;
     height: 34px;
   }
+  
   .footer {
     /* margin-top: 20px;` */
     position: relative;
@@ -598,5 +599,115 @@ main {
     margin-top: 70px;
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (min-width:768px) and (max-width:900px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 0 40px; /* balanced spacing */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* LOGO */
+  .logo {
+    flex: 1;              /* take equal flexible space */
+  }
+
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+
+  /* REMOVE HAMBURGER */
+  .hamburger {
+    display: none;
+  }
+
+  /* HIDE SEARCH */
+  .search {
+    display: none;
+  }
+
+  /* MENU */
+  .menu {
+    flex: 2;                          /* more space than logo */
+    display: flex;
+    justify-content: space-evenly;    /* PERFECT equal spacing */
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    padding: 0;                       /* remove uneven padding */
+  }
+
+  .menu li a {
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 20px;
+  }
+
+  /* MAIN CONTENT */
+  main {
+    margin-top: 90px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+  }
+
+  /* ABOUT */
+  .aboutus {
+    width: 90%;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  .aboutus h1 {
+    font-size: 28px;
+  }
+
+  /* CONTACT FORM */
+  .hk-wrapper {
+    padding: 32px;
+    border-radius: 20px;
+    max-width: 90%;
+  }
+
+  .hk-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .hk-form-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-top: 20px;
+  }
+
+  .hk-btn {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .hk-social {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hk-social-link {
+    width: 34px;
+    height: 34px;
   }
 }

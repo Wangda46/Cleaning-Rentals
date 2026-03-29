@@ -641,3 +641,115 @@ body {
     padding-right: 20px;
   }
 }
+
+@media (min-width:768px) and (max-width:900px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px; /* add some horizontal padding */
+  }
+
+  /* LOGO LEFT */
+  .logo {
+    width: 30%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .logo img {
+    width: 100px;
+    height: auto;
+    margin: 0;
+  }
+
+  /* REMOVE HAMBURGER */
+  .hamburger {
+    display: none;
+  }
+
+  /* HIDE SEARCH */
+  .search {
+    display: none;
+  }
+
+  /* MENU ALIGN HORIZONTALLY WITH SPACE */
+  .menu {
+    display: flex;                 /* horizontal layout */
+    justify-content: space-around; /* equal spacing */
+    align-items: center;           /* vertical alignment */
+    width: 60%;                    /* adjust menu width */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-right: 30px;
+  }
+
+  .menu li {
+    display: inline-block;         /* keep items horizontal */
+    padding: 0 15px;               /* horizontal spacing between items */
+  }
+
+    /* FIX HERO TEXT */
+  main {
+    text-align: center;
+    padding: 0 15px;
+  }
+
+   .main {
+    height: auto;
+  }
+/* Services section */
+  .services-section {
+    height: auto;
+    padding: 0px 20px;
+  }
+
+  .services-section h2 {
+    font-size: 32px;
+    padding-top: 80px;
+  }
+
+  .services-section p {
+    font-size: 18px;
+  }
+
+  /* Fix container position */
+  .services-container {
+    position: relative;
+    top: auto;
+    margin: 40px auto;
+    gap: 20px;
+  }
+
+  /* Service box */
+  .service-box {
+    width: 90%;
+    margin-top: 20px;
+    padding: 30px 15px 15px;
+  }
+
+  .service-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+    top: -35px;
+  }
+
+  .service-box h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-box p {
+    font-size: 0.9rem;
+  }
+
+  .serviceBtn {
+    font-size: 15px;
+    padding: 10px 22px;
+  }
+}
