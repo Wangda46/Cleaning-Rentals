@@ -380,7 +380,7 @@ body {
   flex-direction: column;
   cursor: pointer;
   position: absolute;
-  right: -20px;
+  right: 20px;
   top: 25px;
   z-index: 5;
   background-color: white;
@@ -392,7 +392,6 @@ body {
   height: 3px;
   width: 30px;
   background: black;
-  /* color: black; */
   margin: 2.5px 0;
   display: block;
   transition: 0.3s;
@@ -499,6 +498,7 @@ body {
   /* Hamburger menu visible */
   .hamburger {
     display: flex;
+    margin-left: 30px;
   }
 
   .menu {
